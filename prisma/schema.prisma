@@ -1,0 +1,74 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id               String            @id @default(uuid())
+  name             String?
+  email            String            @unique
+  password         String?           // Nullable to support OAuth login
+  createdAt        DateTime          @default(now())
+  salaryEntries    SalaryEntry[]
+  savedComparisons SavedComparison[]
+}
+
+model Company {
+  id             String        @id @default(uuid())
+  name           String        @unique
+  normalizedName String        @unique
+  logo           String?
+  headquarters   String?
+  industry       String?
+  salaryEntries  SalaryEntry[]
+}
+
+model SalaryEntry {
+  id                String   @id @default(uuid())
+  companyId         String
+  company           Company  @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  userId            String?
+  user              User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  role              String
+  level             String
+  rawLevel          String?  // Original user input level
+  normalizedLevel   String?  // Standardized level
+  location          String
+  baseSalary        Float
+  bonus             Float    @default(0)
+  stock             Float    @default(0)
+  totalCompensation Float
+  createdAt         DateTime @default(now())
+
+  @@index([companyId])
+  @@index([userId])
+  @@index([role])
+  @@index([level])
+  @@index([normalizedLevel])
+  @@index([rawLevel])
+  @@index([location])
+  @@index([role, level])
+  @@index([totalCompensation])
+}
+
+model SavedComparison {
+  id             String   @id @default(uuid())
+  userId         String
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  comparisonData Json     // Stores array of selections
+  createdAt      DateTime @default(now())
+}
+
+model SharedComparison {
+  id             String   @id @default(uuid())
+  slug           String   @unique
+  title          String?
+  views          Int      @default(0)
+  lastViewedAt   DateTime?
+  comparisonData Json     // Stores the comparison selection array
+  createdAt      DateTime @default(now())
+}
