@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { NextRequest, NextResponse } from "next/server";
 import { generateAIInsights, InsightsInput } from "@/lib/aiInsights";
 import { dataService } from "@/services/dataService";

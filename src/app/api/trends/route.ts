@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { NextRequest, NextResponse } from "next/server";
 import { dataService } from "@/services/dataService";
 import { generateTrendData } from "@/lib/trends";

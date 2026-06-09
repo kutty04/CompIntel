@@ -10,7 +10,7 @@ import { formatCurrency, formatNumber } from "../../../lib/utils";
 import { calculatePercentiles } from "../../../lib/analytics";
 import { ArrowLeft, Building2, MapPin, Calendar, Award } from "lucide-react";
 
-export const revalidate = 0; // Dynamic server component
+export const dynamic = "force-dynamic"; // Dynamic server component
 
 interface PageProps {
   params: Promise<{ id: string }>;
