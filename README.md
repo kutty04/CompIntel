@@ -129,15 +129,15 @@ CompIntel solves this discrepancy by centering all statistics, percentile breakd
 
 ## Screenshots
 
-*(Screenshots placeholders representing active layout configurations)*
+*(Actual layout captures from the live application)*
 
 | Dashboard Interface | Underpaid Diagnostic Calculator |
 | :---: | :---: |
-| ![Dashboard Mockup](file:///C:/Users/R.Murugesan/.gemini/antigravity/brain/2e7f814c-cd09-46c3-a229-64e1e0f3de45/media__1781003469018.png) | ![Calculator Mockup](file:///C:/Users/R.Murugesan/.gemini/antigravity/brain/2e7f814c-cd09-46c3-a229-64e1e0f3de45/media__1781003470943.png) |
+| ![Dashboard Interface](public/screenshots/homepage.png) | ![Calculator Interface](public/screenshots/insights.png) |
 
-| Side-by-Side Company Comparison | Theme Studio Preview Modal |
+| Side-by-Side Company Comparison | Compensation Leaderboard |
 | :---: | :---: |
-| ![Comparison Mockup](file:///C:/Users/R.Murugesan/.gemini/antigravity/brain/2e7f814c-cd09-46c3-a229-64e1e0f3de45/media__1781003497947.png) | ![Theme Studio Mockup](file:///C:/Users/R.Murugesan/.gemini/antigravity/brain/2e7f814c-cd09-46c3-a229-64e1e0f3de45/media__1781003506375.png) |
+| ![Comparison Interface](public/screenshots/compare.png) | ![Rankings Interface](public/screenshots/rankings.png) |
 
 ---
 
@@ -443,35 +443,35 @@ Open [http://localhost:3000](http://localhost:3000) to view the application.
 ```
 compintel/
 +-- prisma/
-¦   +-- migrations/             # SQL schema migrations history
-¦   +-- schema.prisma          # Prisma database schema definition
-¦   +-- seed.ts                # Database seed script
+ï¿½   +-- migrations/             # SQL schema migrations history
+ï¿½   +-- schema.prisma          # Prisma database schema definition
+ï¿½   +-- seed.ts                # Database seed script
 +-- public/                    # Static assets
 +-- src/
     +-- app/
-    ¦   +-- admin/
-    ¦   ¦   +-- health/        # Admin portal page and view controller
-    ¦   +-- api/               # API route handlers
-    ¦   ¦   +-- ai-insights/
-    ¦   ¦   +-- auth/
-    ¦   ¦   +-- companies/
-    ¦   ¦   +-- company/
-    ¦   ¦   +-- comparison/
-    ¦   ¦   +-- salaries/
-    ¦   ¦   +-- stats/
-    ¦   ¦   +-- trends/
-    ¦   +-- architecture/      # System architecture map
-    ¦   +-- company/           # Leveled company profile dashboards
-    ¦   +-- compare/           # Side-by-side comparison page
-    ¦   +-- demo/              # Guided tour hub
-    ¦   +-- insights/          # Diagnostic calculator
-    ¦   +-- profile/           # User dashboard
-    ¦   +-- rankings/          # Compensation leaderboards
-    ¦   +-- research/          # Industry matrix
-    ¦   +-- salaries/          # Salary explorer search
-    ¦   +-- submit/            # Submission wizard
-    ¦   +-- globals.css        # Tailwind design tokens
-    ¦   +-- layout.tsx         # App wrapper
+    ï¿½   +-- admin/
+    ï¿½   ï¿½   +-- health/        # Admin portal page and view controller
+    ï¿½   +-- api/               # API route handlers
+    ï¿½   ï¿½   +-- ai-insights/
+    ï¿½   ï¿½   +-- auth/
+    ï¿½   ï¿½   +-- companies/
+    ï¿½   ï¿½   +-- company/
+    ï¿½   ï¿½   +-- comparison/
+    ï¿½   ï¿½   +-- salaries/
+    ï¿½   ï¿½   +-- stats/
+    ï¿½   ï¿½   +-- trends/
+    ï¿½   +-- architecture/      # System architecture map
+    ï¿½   +-- company/           # Leveled company profile dashboards
+    ï¿½   +-- compare/           # Side-by-side comparison page
+    ï¿½   +-- demo/              # Guided tour hub
+    ï¿½   +-- insights/          # Diagnostic calculator
+    ï¿½   +-- profile/           # User dashboard
+    ï¿½   +-- rankings/          # Compensation leaderboards
+    ï¿½   +-- research/          # Industry matrix
+    ï¿½   +-- salaries/          # Salary explorer search
+    ï¿½   +-- submit/            # Submission wizard
+    ï¿½   +-- globals.css        # Tailwind design tokens
+    ï¿½   +-- layout.tsx         # App wrapper
     +-- components/            # Reusable UI components
     +-- lib/                   # Normalizers, math, and auth configs
     +-- services/
