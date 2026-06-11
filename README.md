@@ -4,7 +4,7 @@ CompIntel is a production-grade full-stack Compensation Intelligence platform de
 
 ## Live Demo
 
-[Explore CompIntel Production Deployment (Placeholder URL)](https://compintel-production.vercel.app)
+[Explore CompIntel Production Deployment : https://comp-intel-ruddy.vercel.app]
 
 ---
 
@@ -434,7 +434,7 @@ Start the local development server:
 ```bash
 npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000) to view the application.
+Open [https://comp-intel-ruddy.vercel.app] to view the application.
 
 ---
 
